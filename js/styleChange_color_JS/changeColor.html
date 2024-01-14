@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="colorChangerFunc()" class="btnChangeColor">Change color</button>
+    <header>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+    </header>
+    <main>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Am I green or am I red?</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+    </main>
+
+    <script>
+        var li3Node = document.querySelector("main>ul>li:nth-child(3)");
+        console.dir(li3Node);
+        li3Node.style.color = "red";
+
+        // ************************************
+        // Задача: поставете един бутон в HTML-a и променете програмата, така че li елемента (<li>Am I green or am I red?</li>) да променя цвета на шрифта си от червен към зелен при всяко натискане на бутона
+        // ************************************
+        function colorChangerFunc() {
+            if (li3Node.style.color == "red") {
+                li3Node.style.color = "green";
+            } else {
+                li3Node.style.color = "red";
+            }
+        }
+
+        let btnRedGreen = document.getElementsByClassName('btnChangeColor');
+        console.dir(btnRedGreen);
+    </script>
+
+</body>
+
+</html>
